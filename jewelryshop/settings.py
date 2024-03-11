@@ -41,8 +41,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
-
 ROOT_URLCONF = 'jewelryshop.urls'
 
 TEMPLATES = [
@@ -77,7 +78,11 @@ WSGI_APPLICATION = 'jewelryshop.wsgi.application'
 #}
 
 DATABASES = {
-	"default": dj_database_url.parse('postgres://batz_user:lujZSPLSYtnP1X1VXFsV6OROdbmjtRdp@dpg-cnncvkv79t8c739hsci0-a.oregon-postgres.render.com/batz')
+    'default': dj_database_url.config(
+        # Replace this value with your local database's connection string.
+        default='postgres://batz_user:lujZSPLSYtnP1X1VXFsV6OROdbmjtRdp@dpg-cnncvkv79t8c739hsci0-a.oregon-postgres.render.com/batz',
+        conn_max_age=600
+    )
 }
 
 # Password validation
@@ -130,3 +135,19 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/5.0/howto/static-files/
+
+# This setting informs Django of the URI path from which your static files will be served to users
+# Here, they well be accessible at your-domain.onrender.com/static/... or yourcustomdomain.com/static/...
+STATIC_URL = '/static/'
+
+# This production code might break development mode, so we check whether we're in DEBUG mode
+if not DEBUG:
+    # Tell Django to copy static assets into a path called `staticfiles` (this is specific to Render)
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+    # Enable the WhiteNoise storage backend, which compresses static files to reduce disk use
+    # and renames the files with unique names for each version to support long-term caching
+    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage
