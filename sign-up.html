@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style1.css">
+
+</head>
+
+<body>
+
+    <!-- header section starts  -->
+
+    <header class="header">
+
+        <a href="index.html" class="logo"></i>MukamaStores</a>
+
+        <nav class="navbar">
+            <a href="index.html">home</a>
+            <a href="index.html#features">features</a>
+            <a href="index.html#products">products</a>
+            <a href="index.html#categories">categories</a>
+            <a href="index.html#review">review</a>
+        </nav>
+
+        <div class="icons">
+            <div class="fas fa-bars" id="menu-btn"></div>
+            <div class="fas fa-search" id="search-btn"></div>
+            <div class="fas fa-shopping-cart" id="cart-btn"></div>
+            <div class="fas fa-user" id="login-btn"></div>
+        </div>
+
+        <form action="" class="search-form">
+            <input type="search" id="search-box" placeholder="search here...">
+            <label for="search-box" class="fas fa-search"></label>
+        </form>
+        
+        <div class="shopping-cart">
+            <div class="box">
+                <i class="fas fa-trash"></i>
+                <img src="image/cart-img-1.png" alt="">
+                <div class="content">
+                    <h3>watermelon</h3>
+                    <span class="price">UGX 3000/-</span>
+                    <span class="quantity">qty : 3</span>
+                </div>
+            </div>
+            <div class="box">
+                <i class="fas fa-trash"></i>
+                <img src="image/cart-img-2.png" alt="">
+                <div class="content">
+                    <h3>onion</h3>
+                    <span class="price">UGX 4000/-</span>
+                    <span class="quantity">qty : 5</span>
+                </div>
+            </div>
+            <div class="box">
+                <i class="fas fa-trash"></i>
+                <img src="image/cart-img-3.png" alt="">
+                <div class="content">
+                    <h3>chicken</h3>
+                    <span class="price">UGX 5500/-</span>
+                    <span class="quantity">qty : 1</span>
+                </div>
+            </div>
+            <div class="total"> total : UGX 12500/-</div>
+            <a href="#" class="btn">checkout</a>
+        </div>
+        
+
+ </header>
+  <div class="container">
+    <div class="forms">
+      <div class="form-content">
+        <div class="signup-form">
+          <div class="title">Signup</div>
+          <form action="#">
+            <div class="input-boxes">
+              <div class="input-box">
+                <i class="fas fa-user"></i>
+                <input type="text" placeholder="User Name" required>
+              </div>
+              <div class="input-box">
+                <i class="fas fa-envelope"></i>
+                <input type="text" placeholder="Email" required>
+              </div>
+              <div class="input-box">
+                <i class="fas fa-lock"></i>
+                <input type="password" placeholder="Enter password" required>
+              </div>
+              <div class="input-box">
+                <i class="fas fa-lock"></i>
+                <input type="password" placeholder="Confirm password" required>
+              </div>
+              <div class="button input-box">
+                <input type="submit" value="Sumbit">
+              </div>
+              <div class="text sign-up-text">Already have an account? <a href="login.html">Login now</a></div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- footer section starts  -->
+
+    <section class="footer">
+
+        <div class="box-container">
+
+            <!-- <div class="box">
+                <a href="#" class="footerLogo"><i class="fas fa-carrot"></i>Frezhee</a>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam, saepe.</p>
+                <div class="share">
+                    <a href="#" class="icon"><img src="https://img.icons8.com/color/2x/twitter.png" /></a>
+                    <a href="#" class="icon"><img src="https://img.icons8.com/color/2x/facebook.png" /></a>
+                    <a href="#" class="icon"><img src="https://img.icons8.com/color/2x/instagram-new.png" /></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <h3>contact info</h3>
+                <a href="#" class="links"> <i class="fas fa-phone"></i> +256-390-7890711 </a>
+                <a href="#" class="links"> <i class="fas fa-phone"></i> +256-200-7095711 </a>
+                <a href="#" class="links"> <i class="fas fa-envelope"></i> info@Frezhee.com </a>
+                <a href="#" class="links"> <i class="fas fa-map-marker-alt"></i>Kampala, Uganda</a>
+            </div>  -->
+
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="#" class="links"> <i class="fas fa-arrow-right"></i> home </a>
+                <a href="#" class="links"> <i class="fas fa-arrow-right"></i> features </a>
+                <a href="#" class="links"> <i class="fas fa-arrow-right"></i> products </a>
+                <a href="#" class="links"> <i class="fas fa-arrow-right"></i> categories </a>
+                <a href="#" class="links"> <i class="fas fa-arrow-right"></i> review </a>
+                <a href="#" class="links"> <i class="fas fa-arrow-right"></i> Our blog</a>
+            </div>
+
+            <div class="box">
+                <h3>Contact Us</h3>
+                <p>Reach out to us for any inquiries</p>
+                <input type="text" placeholder="Message" class="text">
+                <input type="submit" value="Send" class="btn">
+                <img src="image/payment.png" class="payment-img" alt="">
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- footer section ends -->
+    <div class="credit">
+  
+&copy  MukamaStores 2024
+
+    </div>
+
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+ <!-- custom js file link  -->
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
