@@ -1,4 +1,4 @@
-
+import dj_database_url
 
 from pathlib import Path
 
@@ -69,13 +69,16 @@ WSGI_APPLICATION = 'jewelryshop.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': BASE_DIR / 'db.sqlite3',
+#    }
+#}
 
+DATABASES = {
+	"default": dj_database_url.parse('postgres://batz_user:lujZSPLSYtnP1X1VXFsV6OROdbmjtRdp@dpg-cnncvkv79t8c739hsci0-a.oregon-postgres.render.com/batz')
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
