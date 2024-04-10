@@ -80,7 +80,7 @@ input {
 }
 
 input[type="radio"] {
-  accent-color: #fc8080;
+  accent-color: #3c1;
   accent-color: var(--color-primary);
 }
 
@@ -116,14 +116,13 @@ tfoot {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #fc8080;
+  background-color: #3c1;
   background-color: var(--color-primary);
   border-radius: 999em;
   color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  grid-gap: 0.5em;
   gap: 0.5em;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -139,7 +138,7 @@ tfoot {
 
 .button:focus,
 .button:hover {
-  background-color: #e96363;
+  background-color: #3c1;
 }
 
 .button--full {
@@ -148,7 +147,7 @@ tfoot {
 
 .card {
   border-radius: 1em;
-  background-color: #fc8080;
+  background-color: #3c1;
   background-color: var(--color-primary);
   color: #fff;
   padding: 1em;
